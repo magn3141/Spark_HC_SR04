@@ -24,7 +24,7 @@ double HC_SR04::getDistanceCM(){
   waitForEcho(_echoPin, LOW, 100);
   long endTime = micros();
   long duration = endTime - startTime;
-  double distance = duration / 29.0 / 2.0;
+  double distance = duration * 34 / 100 / 2;
   if (distance < _minCM || distance > _maxCM){
    return -1;
   }
